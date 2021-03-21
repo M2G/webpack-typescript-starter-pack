@@ -10,15 +10,17 @@ module.exports = {
   ],
   "transform": {
     "^.+\\.(js)$": "babel-jest",
-    "^.+\\.(ts)?$": "ts-jest"
+    "^.+\\.(ts)?$": "ts-jest",
+    "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js"
   },
   "transformIgnorePatterns": [
     "[/\\\\]node_modules[/\\\\].+\\.(js|ts)$",
-    "^.+\\.module\\.(css|sass|scss)$"
+    "^.+\\.module\\.(css|sass|scss)$",
   ],
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts?$",
   "modulePaths": [],
   "moduleNameMapper": {
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
   "moduleFileExtensions": [
