@@ -1,12 +1,9 @@
 const webpack = require('webpack');
-const resolve = require('resolve');
 const path = require('path');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const paths = require('./paths');
-
-const publicPath = '/';
 
 const plugins = [
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
